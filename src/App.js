@@ -1,12 +1,13 @@
 import React from 'react';
-import ValueContainer from './ValueContainer';
+import CurrencyConverter from './CurrencyList';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export default class App extends React.Component {
   render() {
     return (
-      <div>
-       <ValueContainer/>
-      </div>
+      <MuiThemeProvider>
+        <CurrencyConverter/>
+      </MuiThemeProvider>
     );
   }
 }

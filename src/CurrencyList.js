@@ -1,7 +1,8 @@
 import React from 'react';
 import datajson from './Data';
+import DropMenu from "./DropMenu";
 
-export default class ValueContainer extends React.Component {
+export default class CurrencyList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -18,7 +19,7 @@ export default class ValueContainer extends React.Component {
                 if (!x.attributes.currency) {
                     return false;
                 }
-                return <h4 key={index}>Currency: {x.attributes.currency} - Value: {x.attributes.rate}</h4>;}
+                return <DropMenu key={index}>Currency: {x.attributes.currency} - Value: {x.attributes.rate}</DropMenu>;}
             );
 
 
