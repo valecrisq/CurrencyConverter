@@ -1,4 +1,8 @@
 body {
   font-family: sans-serif;
-  background-color: gray;
+  background-color: whitesmoke;
+}
+
+.select-field-currency {
+    color: red !important;
 }
