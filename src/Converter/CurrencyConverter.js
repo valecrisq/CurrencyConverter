@@ -1,5 +1,5 @@
 import React from 'react';
-import datajson from './Data';
+import datajson from '../Data/Data';
 import FormInput from './FormInput';
 import Currencies from './Currencies';
 

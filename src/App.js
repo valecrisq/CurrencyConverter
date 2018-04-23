@@ -1,5 +1,5 @@
 import React from 'react';
-import CurrencyConverter from './CurrencyConverter';
+import CurrencyConverter from './Converter/CurrencyConverter';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export default class App extends React.Component {
