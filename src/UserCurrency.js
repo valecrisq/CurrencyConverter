@@ -2,14 +2,18 @@ import React from 'react';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 
-export default class SelectCurrency extends React.Component {
+export default class UserCurrency extends React.Component {
     state = {
-        values: [],
+        cvalue: [],
     };
 
-    handleChange = (event, index, values) => this.setState({values});
+    handleChange = (event, index, cvalue) => this.setState({cvalue});
+
+
 
     render() {
+
+
 
         const currencyvalue = this.props.data.map((singlevalue, index) => {
             if (!singlevalue.attributes.currency) {
@@ -26,18 +30,20 @@ export default class SelectCurrency extends React.Component {
             )
         });
 
-        return (
-            <div>
-                <SelectField className={"select-field-currency"}
-                    color={"red"}
-                    hintText="Your Currency"
-                    value={this.state.values}
-                    onChange={this.handleChange}
-                >
-                    {currencyvalue}
-                </SelectField>
-            </div>
 
-    );
+
+
+
+        return (
+            <SelectField className={"select-field-currency"}
+                         maxHeight={250}
+                         hintText="Your Currency"
+                         value={this.state.cvalue}
+                         onChange={this.handleChange}
+            >
+                {currencyvalue}
+            </SelectField>
+
+        );
     }
 }

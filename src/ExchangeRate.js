@@ -2,12 +2,12 @@ import React from 'react';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 
-export default class SelectRate extends React.Component {
+export default class ExchangeRate extends React.Component {
     state = {
-        values: [],
+        rvalue: "",
     };
 
-    handleChange = (event, index, values) => this.setState({values});
+    handleChange = (event, index, rvalue) => this.setState({rvalue});
 
     render() {
 
@@ -26,13 +26,14 @@ export default class SelectRate extends React.Component {
             )
         });
 
-
+        console.log(this.state.rvalue);
 
         return (
             <SelectField
-                hintText="Currency Exchange Rate"
-                value={this.state.values}
+                hintText="Convert To"
+                value={this.state.rvalue}
                 onChange={this.handleChange}
+                maxHeight={250}
             >
                 {ratevalue}
             </SelectField>
