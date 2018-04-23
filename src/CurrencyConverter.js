@@ -17,7 +17,6 @@ export default class CurrencyConverter extends React.Component {
         console.log(event.target.value);
         this.inputUser = event.target.value;
         this.calculateExchangeRate();
-        debugger;
         this.refs.xxx.getInputUser().focus();
     }
 
@@ -34,7 +33,7 @@ export default class CurrencyConverter extends React.Component {
     calculateExchangeRate() {
         if (this.toCurrencySelect && this.fromCurrencySelect) {
             this.setState({
-                result: (this.inputUser * this.toCurrencySelect.attributes.rate / this.fromCurrencySelect.attributes.rate)
+                result: Math.round(this.inputUser * this.toCurrencySelect.attributes.rate / this.fromCurrencySelect.attributes.rate *100) / 100
             });
         }
     }
@@ -42,9 +41,12 @@ export default class CurrencyConverter extends React.Component {
     render() {
 
         let showresult;
+
         if (this.state.result) {
-            showresult = <h3>{this.state.result}</h3>
+            showresult = <h2 className={'result'}>{this.inputUser + " " + this.fromCurrencySelect.attributes.currency + " Is egual to " + this.state.result + " " + this.toCurrencySelect.attributes.currency}</h2>
         }
+
+
 
         return (
             <div className={"container"}>
