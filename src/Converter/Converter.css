@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 600px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.result {
+    justify-content: center;
+    order: 3;
+    margin: auto;
+    margin-top: 100px;
+}

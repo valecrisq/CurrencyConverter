@@ -1,0 +1,5 @@
+.currencies {
+    order: 1 !important;
+    flex-grow: 3 !important;
+    width: 250px !important;
+}

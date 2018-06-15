@@ -1,10 +1,12 @@
 import React from 'react';
 import datajson from '../Data/Data';
-import FormInput from './FormInput';
-import Currencies from './Currencies';
+import FormInput from './FormInput/FormInput';
+import Currencies from './Currencies/Currencies';
+import './Converter.css'
+import './FormInput/FormInput.css'
+import './Currencies/Currencies.css'
 
-
-export default class CurrencyConverter extends React.Component {
+export default class Converter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,7 +35,7 @@ export default class CurrencyConverter extends React.Component {
     calculateExchangeRate() {
         if (this.toCurrencySelect && this.fromCurrencySelect) {
             this.setState({
-                result: Math.round(this.inputUser * this.toCurrencySelect.attributes.rate / this.fromCurrencySelect.attributes.rate *100) / 100
+                result: Math.round(this.inputUser * this.toCurrencySelect.attributes.rate / this.fromCurrencySelect.attributes.rate * 100) / 100
             });
         }
     }
@@ -42,10 +44,15 @@ export default class CurrencyConverter extends React.Component {
 
         let showresult;
 
-        if (this.state.result) {
-            showresult = <h2 className={'result'}>{this.inputUser + " " + this.fromCurrencySelect.attributes.currency + " Is egual to " + this.state.result + " " + this.toCurrencySelect.attributes.currency}</h2>
-        }
 
+        if (this.state.result) {
+            showresult =
+                <div className={'result'}>
+                    <h3>{"The value of " + this.inputUser + " " + this.fromCurrencySelect.attributes.currency}</h3>
+                    <h3>is egual to</h3>
+                    <h1 style={{color: 'darkgreen'}}>{this.state.result + " " + this.toCurrencySelect.attributes.currency}</h1>
+                </div>
+        }
 
 
         return (

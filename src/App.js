@@ -1,12 +1,12 @@
 import React from 'react';
-import CurrencyConverter from './Converter/CurrencyConverter';
+import Converter from './Converter/Converter';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export default class App extends React.Component {
   render() {
     return (
       <MuiThemeProvider>
-        <CurrencyConverter/>
+        <Converter/>
       </MuiThemeProvider>
     );
   }

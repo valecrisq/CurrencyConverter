@@ -2,35 +2,3 @@ body {
   font-family: sans-serif;
   background-color: whitesmoke;
 }
-
-.select-field-currency {
-
-}
-
-.container {
-    display: flex;
-    text-align: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 600px;
-    margin: auto;
-}
-
-.form-input {
-    order: 2 !important;
-    flex-grow: 3;
-    width: 500px;
-
-}
-
-.currencies {
-    order: 1 !important;
-    flex-grow: 3 !important;
-    width: 250px !important;
-}
-
-.result {
-    justify-content: center;
-    order: 3;
-    margin: auto;
-}

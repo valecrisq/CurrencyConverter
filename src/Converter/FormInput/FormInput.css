@@ -1,0 +1,5 @@
+.form-input {
+    order: 2 !important;
+    flex-grow: 3;
+    width: 500px;
+}
