@@ -49,7 +49,7 @@ export default class Converter extends React.Component {
             showresult =
                 <div className={'result'}>
                     <h3>{"The value of " + this.inputUser + " " + this.fromCurrencySelect.attributes.currency}</h3>
-                    <h3>is egual to</h3>
+                    <h3>is equal to</h3>
                     <h1 style={{color: 'darkgreen'}}>{this.state.result + " " + this.toCurrencySelect.attributes.currency}</h1>
                 </div>
         }
